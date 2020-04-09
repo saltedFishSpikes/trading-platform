@@ -1,0 +1,32 @@
+{
+  "typeArr":[
+    {
+      "typeId":1,
+      "typeName":"数码"
+    },
+    {
+      "typeId":2,
+      "typeName":"家电"
+    },
+    {
+      "typeId":3,
+      "typeName":"服饰"
+    },
+    {
+      "typeId":4,
+      "typeName":"家具"
+    },
+    {
+      "typeId":5,
+      "typeName":"书籍"
+    },
+    {
+      "typeId":6,
+      "typeName":"数码"
+    },
+    {
+      "typeId":7,
+      "typeName":"其它"
+    }
+  ]
+}
