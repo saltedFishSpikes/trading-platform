@@ -2,6 +2,7 @@
 
 ## 介绍
 项目前端代码，[后端代码](https://github.com/saltedFishSpikes/trading-platform-php)
+
 开发环境为windows10 nodejs 12.16.1.
 项目实现了一个简单的二手交易平台，功能包括：
 + 用户登录注册
