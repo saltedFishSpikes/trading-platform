@@ -199,6 +199,7 @@ export default {
         }).then(() => {
           this.$router.push({ name: "login" });
           window.localStorage.removeItem("token");
+          this.$store.commit("removeAllChat");
           this.$store.commit("setUserImg", "");
           this.$store.commit("setUserId", "");
           this.$store.commit("setUserType", 1);

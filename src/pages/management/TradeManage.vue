@@ -94,9 +94,12 @@ export default {
         this.searchForm.sellerId = this.$route.params.userId
       }
     }
+    if(this.$route.params.goodsName){
+      this.searchForm.goodsName = this.$route.params.goodsName
+    }
     this.getTable()
-    this.searchForm.sellerId = null
-    this.searchForm.buyerId = null
+    // this.searchForm.sellerId = null
+    // this.searchForm.buyerId = null
   },
   methods:{
     /**

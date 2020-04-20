@@ -46,6 +46,9 @@ export default {
       if(index>=0){
         state.chat.splice(index,1)
       }
+    },
+    removeAllChat(state){
+      state.chat = []
     }
   }
 }

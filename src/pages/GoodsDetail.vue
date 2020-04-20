@@ -29,7 +29,7 @@
         <tr>
           <td>卖家名称</td>
           <td>
-            <span v-if="goodsDetail.sellerId == userId">{{goodsDetail.sellerName}}</span>
+            <span v-if="goodsDetail.sellerId == userId || userType == 3">{{goodsDetail.sellerName}}</span>
             <el-button v-else type="text" @click="gotoUser">{{goodsDetail.sellerName}}</el-button>
           </td>
         </tr>

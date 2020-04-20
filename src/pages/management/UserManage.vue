@@ -7,7 +7,7 @@
       </el-form-item>
       <el-form-item prop="status" label="用户状态">
         <el-select v-model="searchForm.status" size="small" clearable placeholder="请选择用户状态">
-          <el-option v-for="item in allStatus" :key="item" :value="item"></el-option>
+          <el-option v-for="(item,index) in allStatus" :key="item" :value="index+1" :label="item"></el-option>
         </el-select>
       </el-form-item>
       <el-form-item prop="successNum" label="交易成功数">
@@ -75,8 +75,8 @@ export default {
         status: null,
         successNum: null
       },
-      allStatus: ["禁用", "正常"],
-      allSuccess: ["0~10", "10~50", "50以上"],
+      allStatus: ["正常", "禁用"],
+      allSuccess: ["0~5", "5~10", "10以上"],
       currentPage: []
     };
   },
@@ -147,7 +147,7 @@ export default {
             })
             .then(res => {
               this.$message({
-                message: res.message,
+                message: res.data,
                 type: "success",
                 duration: 1000
               });

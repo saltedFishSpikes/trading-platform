@@ -4,7 +4,7 @@
     @close="closeDialog"
     @opened="openedDialog"
     :title="type == 1?'修改用户头像':'修改密码'"
-    width="400px"
+    width="420px"
     custom-class="zf-user-update-dialog"
   >
     <el-form :model="userInfo" label-width="120px" ref="userInfo" :rules="rules">
@@ -186,6 +186,7 @@ export default {
                   message: res.data,
                   duration: 1000
                 });
+                this.closeDialog();
                 this.$emit("getUserDetail");
               }
               

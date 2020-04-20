@@ -38,7 +38,7 @@
           >审核</el-button>
           <el-button
             type="text"
-            @click="gotoTrade(scope.row.goodsId)"
+            @click="gotoTrade(scope.row.goodsName)"
             v-else-if="scope.row.goodsStatus == 4"
           >查看交易</el-button>
           <el-button
@@ -147,8 +147,8 @@ export default {
      * @function 交易详情
      * @param {Number} goodsId 交易id
      */
-    gotoTrade(goodsId) {
-      this.$router.push({name:"tradeManage",params:{goodsId:goodsId}})
+    gotoTrade(goodsName) {
+      this.$router.push({name:"tradeManage",params:{goodsName:goodsName}})
     },
     /**
      * @function 下架二手品

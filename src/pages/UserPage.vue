@@ -209,7 +209,7 @@ export default {
       userTrade: [],
       userGoods: [],
       allType: [],
-      allUserStatus: ["正常", "停用"],
+      allUserStatus: ["正常", "禁用"],
       allTradeStatus: [
         "未支付",
         "已支付",
@@ -381,7 +381,7 @@ export default {
         ) {
           return "请输入2-10个字符以内的用户名";
         } else if (!this.$common.checkString(value)) {
-          return "请输入正常用户名";
+          return type == 1?"请输入正常用户名":"请输入正常地址";
         } else if (type == 2 && !value) {
           return "地址不能为空";
         } else if (type == 2 && typeof value == "string" && value.length > 50) {
@@ -418,6 +418,7 @@ export default {
                 });
                 this.$router.push({ name: "login" });
                 window.localStorage.removeItem("token");
+                this.$store.commit("removeAllChat");
                 this.$store.commit("setUserImg", "");
                 this.$store.commit("setUserId", "");
                 this.$store.commit("setUserType", 1);

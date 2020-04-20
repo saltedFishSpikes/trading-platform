@@ -15,6 +15,12 @@ export default {
     ZfSideBar
   },
   computed:{
+    active:{
+      get(){
+        return this.$store.getters.getSideBar
+      },
+      set(){}
+    },
     userId:{
       get(){
         return this.$store.getters.getUserId
@@ -66,6 +72,7 @@ export default {
         window.sessionStorage.setItem('sideBarId',this.active)
       })
       let sideBarActive = window.sessionStorage.getItem('sideBarId')
+      window.sessionStorage.removeItem('sideBarId')
       if(sideBarActive) {
         this.$store.commit('setSideBar',sideBarActive);
       }
@@ -85,6 +92,7 @@ export default {
           // 关闭 websocket
           console.log("您已断开连接");
           this.$websocket.closeHeart()
+          this.$store.commit('removeAllChat')
         }
         this.$websocket.setWs(ws);
       }else{

@@ -258,7 +258,7 @@ export default {
   .post {
     display: flex;
     padding: 10px 20px;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     margin-bottom: 20px;
     .poster {
       cursor: pointer;
@@ -292,7 +292,7 @@ export default {
   .reply {
     padding: 20px;
     margin-top: 20px;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     .reply-item {
       position: relative;
       &:not(:last-child) {
@@ -334,13 +334,14 @@ export default {
         bottom: 0;
         padding: 10px 0;
         text-align: center;
-        background: linear-gradient(transparent, #eee);
+        background: linear-gradient(transparent, #ddd);
       }
       .commit-list {
         padding-bottom: 20px;
         .commit-item {
           background: #eeeeee55;
           padding: 10px;
+          line-height: 16px;
           .from,
           .to {
             color: #999;
